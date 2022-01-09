@@ -5,3 +5,6 @@
 *.csx      text diff=csharp
 *.sln      text eol=crlf merge=union
 *.csproj   text merge=union
+
+WebApp.MVC/Content/* linguist-vendored
+WebApp.MVC/Scripts/* linguist-vendored
