@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model WebApp.MVC.Models.HomeModel
+
+
+
+<div class="container body-content" style="padding:1em;">
+    <div class="row">
+        <div class="col-md-4">
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-item">
+                    @Html.LabelFor(model => model.UserId)
+                    @Html.TextBoxFor(model => model.UserId, new { @class = "form-control" })
+                </div>
+                <div class="form-item">
+                    @Html.LabelFor(model => model.Password)
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                </div>
+                <div class="button-panel" style="padding-top:1em;">
+                    <input type="submit" value="ログイン" class="btn btn-primary" />
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
+
+
+

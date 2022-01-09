@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "List Example";
+}
+@model WebApp.MVC.Models.ListExampleModel
+
+@using (Html.BeginForm())
+{
+    <div style="padding:1em;">
+        <table>
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>名前</th>
+                    <th>年齢</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- インデックス指定で描画しないと、post時にバインドされない -->
+                <!-- 連続するインデックスでないとだめ -->
+                <!-- 当然Postで投げれるデータしかバインドされない　編集項目以外hidden等で保持が必要 -->
+                @for (var i = 0; i < Model.UserList.Count; i++)
+                {
+                    <tr>
+                        <td>@Html.TextBoxFor(m => m.UserList[i].UserId, new { @class = "form-control" })</td>
+                        <td>@Html.TextBoxFor(m => m.UserList[i].UserName, new { @class = "form-control" })</td>
+                        <td>@Html.TextBoxFor(m => m.UserList[i].Age, new { @class = "form-control" })</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <input type="submit" value="送信" class="btn btn-primary"/>
+
+}
+

@@ -1,0 +1,28 @@
+﻿@using System.Linq.Expressions;
+
+@model WebApp.MVC.Models.TimeModel
+
+
+@{
+    List<SelectListItem> hours = new List<SelectListItem>();
+
+    for (int i = 0; i < 24; i++)
+    {
+        hours.Add(new SelectListItem { Text = i.ToString(), Value = i.ToString() });
+    }
+
+    List<SelectListItem> minutes = new List<SelectListItem>();
+
+    for (int i = 0; i < 60 / 5; i++)
+    {
+        var min = i * 5;
+        minutes.Add(new SelectListItem { Text = min.ToString(), Value = min.ToString() });
+    }
+
+}
+<div class="form-inline">
+
+    @Html.DropDownListFor(m => m.Hour, hours, new { @class = "form-control" })
+    <span>：</span>
+    @Html.DropDownListFor(m => m.Minute, minutes, new { @class = "form-control" })
+</div>

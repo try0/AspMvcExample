@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Partial View Example";
+}
+
+@using WebApp.MVC.Models;
+@using System.Linq.Expressions;
+@using WebApp.MVC.Core.Extensions;
+
+@model WebApp.MVC.Models.NestedPartialViewModel
+
+@using (Html.BeginForm())
+{
+    <div style="padding:1em;">
+        @{
+            Html.RenderPartialFor("_NestedView", m => m);
+        }
+    </div>
+
+    <input type="submit" value="送信" class="btn btn-primary"/>
+
+}
+

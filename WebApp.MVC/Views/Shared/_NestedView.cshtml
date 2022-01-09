@@ -1,0 +1,19 @@
+﻿@using System.Linq.Expressions;
+@using WebApp.MVC.Core.Extensions;
+
+@model WebApp.MVC.Models.NestedPartialViewModel
+
+
+
+<div style="padding-bottom:.5em;">
+    @Html.TextBoxFor(m => m.Value, new { @class = "form-control" })
+</div>
+
+<div style="padding-left: 1em;">
+
+    @for (int i = 0; i < Model.Children.Count; i++)
+    {
+        Html.RenderPartialFor("_NestedView", m => m.Children[i]);
+    }
+
+</div>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Partial View Example";
+}
+
+@using WebApp.MVC.Models;
+@using WebApp.MVC.Core.Extensions;
+
+@model WebApp.MVC.Models.PartialViewExampleModel
+
+@using (Html.BeginForm())
+{
+
+    <div style="padding:1em;">
+
+        @{
+            Html.RenderPartialFor("_TimeDropdownListView", m => m.TimeList);
+        }
+
+    </div>
+
+    <input type="submit" value="送信" class="btn btn-primary"/>
+
+}
+
