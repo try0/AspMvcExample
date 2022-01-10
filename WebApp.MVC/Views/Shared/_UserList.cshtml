@@ -1,0 +1,25 @@
+﻿@using System.Collections.Generic;
+@model List<WebApp.MVC.Models.ListExampleModel.User>
+
+<table class="table table-bordered table-sm table-hover">
+    <thead class="table-light">
+
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>年齢</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (var i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@Html.TextBoxFor(m => m[i].UserId, new { @class = "form-control" })</td>
+                <td>@Html.TextBoxFor(m => m[i].UserName, new { @class = "form-control" })</td>
+                <td>@Html.TextBoxFor(m => m[i].Age, new { @class = "form-control" })</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

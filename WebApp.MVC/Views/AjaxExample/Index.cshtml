@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "List Example";
+}
+@model WebApp.MVC.Models.ListExampleModel
+
+@using (Html.BeginForm())
+{
+    <script>
+
+        $(function () {
+
+            // Controller UserListメソッドでパーシャルビューを返す
+            $.ajax({
+                type: "POST",
+                url: "/AjaxExample/PartialUserListView",
+                data: $(this).serialize(),
+                success: function (data) {
+                    // パーシャルビューをセット
+
+                    $("#userListLoader").css("display", "none");
+                    $("#userList").html(data);
+                },
+                error: function (jqXHR, status, error) {
+                    console.error(error);
+                    console.error(status);
+                }
+            });
+        });
+    </script>
+    <div style="padding:1em;">
+        <div id="userListLoader">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <div id="userList"></div>
+    </div>
+
+    <input type="submit" value="送信" class="btn btn-primary" />
+
+}
+

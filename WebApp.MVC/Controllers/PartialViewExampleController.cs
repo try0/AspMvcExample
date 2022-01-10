@@ -54,9 +54,9 @@ namespace WebApp.MVC.Controllers
 
             var root = new NestedPartialViewModel
             {
-                Value = "0"
+                Value = "1"
             };
-            CreateTestModel(root, 1);
+            CreateChildModel(root, 2);
 
             return View(root);
         }
@@ -69,10 +69,10 @@ namespace WebApp.MVC.Controllers
             return View(model);
         }
 
-        private void CreateTestModel(NestedPartialViewModel model, int depth)
+        private void CreateChildModel(NestedPartialViewModel model, int depth)
         {
 
-            if (depth == 3)
+            if (depth == 4)
             {
                 return;
             }
@@ -87,7 +87,7 @@ namespace WebApp.MVC.Controllers
                 child.Parent = model;
 
 
-                CreateTestModel(child, childDepth);
+                CreateChildModel(child, childDepth);
             }
 
         }

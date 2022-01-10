@@ -21,8 +21,12 @@
 
 }
 <div class="form-inline">
+    <div class="input-group mb-3">
+        @Html.DropDownListFor(m => m.Hour, hours, new { @class = "form-control" })
+        <span >：</span>
+        @Html.DropDownListFor(m => m.Minute, minutes, new { @class = "form-control" })
+    </div>
+    
+    <span></span>
 
-    @Html.DropDownListFor(m => m.Hour, hours, new { @class = "form-control" })
-    <span>：</span>
-    @Html.DropDownListFor(m => m.Minute, minutes, new { @class = "form-control" })
 </div>

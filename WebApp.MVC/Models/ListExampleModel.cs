@@ -5,6 +5,7 @@ using System.Web;
 
 namespace WebApp.MVC.Models
 {
+    [Serializable]
     public class ListExampleModel
     {
         public class User { 
