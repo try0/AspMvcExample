@@ -8,15 +8,14 @@ ASP.NET　MVC学習用
 * [View](WebApp.MVC/Views/LoginFormExample/Index.cshtml)
 
 
-![image](https://user-images.githubusercontent.com/17096601/148688068-2d6a99b5-54a4-49fc-b8bc-157f4e63e717.png)
-
+![image](https://user-images.githubusercontent.com/17096601/148722305-49a2c2d9-b02b-4dc0-9915-df4d4a58e057.png)
 
 ### リスト
 * [Controller](WebApp.MVC/Controllers/ListExampleController.cs)
 * [View](WebApp.MVC/Views/ListExample/Index.cshtml)
 
 
-![image](https://user-images.githubusercontent.com/17096601/148688089-62490210-8371-4096-a13c-f5721ffb9d07.png)
+![image](https://user-images.githubusercontent.com/17096601/148722319-9666d56b-b651-4ec7-ba5a-8d38aa741b4c.png)
 
 
 ### パーシャルビュー
@@ -27,8 +26,7 @@ ASP.NET　MVC学習用
 * [HtmlHelper](WebApp.MVC.Core/Extensions/HtmlHelperExtensions.cs)
 
 
-![image](https://user-images.githubusercontent.com/17096601/148688100-b707f932-d96a-4306-9f89-0c09901d3c42.png)
-
+![image](https://user-images.githubusercontent.com/17096601/148722326-9c6b92c5-0818-42fa-9baa-c450dfde562d.png)
 
 ### ネストされたパーシャルビュー
 * [Controller Nested](WebApp.MVC/Controllers/PartialViewExampleController.cs)
@@ -36,4 +34,14 @@ ASP.NET　MVC学習用
 * [NestedView](WebApp.MVC/Views/Shared/_NestedView.cshtml)
 * [HtmlHelper](WebApp.MVC.Core/Extensions/HtmlHelperExtensions.cs)
 
-![image](https://user-images.githubusercontent.com/17096601/148688128-7eebc934-7ef6-4503-b3c7-329085434af0.png)
+![image](https://user-images.githubusercontent.com/17096601/148722348-ab1067d1-340c-4f45-848f-d0d8142898fc.png)
+
+
+### パーシャルビュー Ajax Lazy Load
+* [Controller](WebApp.MVC/Controllers/AjaxExampleController.cs)
+* [View](WebApp.MVC/Views/PartialViewExample/Index.cshtml)
+
+![AjaxLazyLoad](https://user-images.githubusercontent.com/17096601/148722499-aa705367-7b7b-4a60-8849-dfacb3a3b1e7.gif)
+
+
+
