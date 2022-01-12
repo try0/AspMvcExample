@@ -39,7 +39,7 @@ ASP.NET　MVC学習用
 
 ### パーシャルビュー Ajax Lazy Load
 * [Controller](WebApp.MVC/Controllers/AjaxExampleController.cs)
-* [View](WebApp.MVC/Views/PartialViewExample/Index.cshtml)
+* [View](WebApp.MVC/Views/AjaxExample/Index.cshtml)
 
 ![AjaxLazyLoad](https://user-images.githubusercontent.com/17096601/148722499-aa705367-7b7b-4a60-8849-dfacb3a3b1e7.gif)
 
